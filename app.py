@@ -36,7 +36,7 @@ from transformers import CLIPFeatureExtractor
 feature_extractor = CLIPFeatureExtractor.from_pretrained("openai/clip-vit-base-patch32")
 
 # Function 
-@spaces.GPU(enable_queue=True)
+@spaces.GPU(duration=15,enable_queue=True)
 def generate_image(prompt, base, motion, step, progress=gr.Progress()):
     global step_loaded
     global base_loaded
