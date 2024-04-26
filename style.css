@@ -1,0 +1,7 @@
+.gradio-container {
+    max-width: 800px !important;
+}
+
+#video_output {
+    margin: 0 auto
+}
