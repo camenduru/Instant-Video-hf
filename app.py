@@ -78,7 +78,7 @@ with gr.Blocks(css="style.css") as demo:
         "<h1><center>Instant⚡Video</center></h1>" +
         "<p><center>Lightning-fast text-to-video generation</center></p>" +
         "<p><center><span style='color: red;'>You may change the steps from 4 to 8, if you didn't get satisfied results.</center></p>" +
-        "<p><center><strong> First Image processing takes time then images generate faster.</p>" +
+        "<p><center><strong> First Video Generating takes time then Videos generate faster.</p>" +
         "<p><center>Write prompts in style as Given in Example</p>"
     )
     with gr.Group():
@@ -150,11 +150,14 @@ with gr.Blocks(css="style.css") as demo:
 
     gr.Examples(
         examples=[
-        ["Focus: Eiffel Tower (Animate: Clouds moving)"],
-        ["Focus: Lion in forest (Animate: Lion as walking)"],
-        ["Focus: Astronaut in Space"],
-        ["Focus: Group of Birds in sky (Animate:  Birds Moving) (Shot From distance)"],
-        ["Focus:  Statue of liberty (Shot from Drone) (Animate: Drone coming toward statue)"],
+        ["Focus: Eiffel Tower (Animate: Clouds moving)"], #Atmosphere Movement Example
+        ["Focus: Trees In forest (Animate: Lion running)"], #Object Movement Example
+        ["Focus: Astronaut in Space"], #Normal
+        ["Focus: Group of Birds in sky (Animate:  Birds Moving) (Shot From distance)"], #Camera distance
+        ["Focus:  Statue of liberty (Shot from Drone) (Animate: Drone coming toward statue)"], #Camera Movement
+        ["Focus: Panda in Forest (Animate: Drinking Tea)"], #Doing Something
+        ["Focus: Kids Playing (Season: Winter)"], #Atmosphere or Season
+        {"Focus: Cars in Street (Season: Rain, Daytime) (Shot from Distance) (Movement: Cars running)"} #Mixture
     ], 
         fn=generate_image,
         inputs=[prompt, select_base, select_motion, select_step],
