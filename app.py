@@ -10,6 +10,11 @@ from huggingface_hub import hf_hub_download
 from safetensors.torch import load_file
 from PIL import Image
 
+MORE = """ ## TRY Other Models
+        ### JARVIS: Your VOICE Assistant -> https://huggingface.co/spaces/KingNish/JARVIS
+        ### Instant Image: 4k images in 5 Second -> https://huggingface.co/spaces/KingNish/Instant-Image
+        """
+
 # Constants
 bases = {
     "Cartoon": "frankjoshua/toonyou_beta6",
@@ -164,5 +169,7 @@ with gr.Blocks(css="style.css") as demo:
         outputs=video,
         cache_examples=False,
 )
+
+    gr.Markdown(MORE)
 
 demo.queue().launch()
