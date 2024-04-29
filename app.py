@@ -78,8 +78,8 @@ with gr.Blocks(css="style.css") as demo:
         "<h1><center>Instant⚡Video</center></h1>" +
         "<p><center>Lightning-fast text-to-video generation</center></p>" +
         "<p><center><span style='color: red;'>You may change the steps from 4 to 8, if you didn't get satisfied results.</center></p>" +
-        "<p><center><strong> First Video Generating takes time then Videos generate faster.</p>" +
-        "<p><center>Write prompts in style as Given in Example</p>"
+        "<p><center><strong>First Video Generating takes time then Videos generate faster.</p>" +
+        "<p><center>Make Sure to Write prompts in style as Given in Example, and ❤ this Space</p>"
     )
     with gr.Group():
         with gr.Row():
