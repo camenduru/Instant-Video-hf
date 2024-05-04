@@ -5,4 +5,4 @@ torch
 transformers
 opencv-python
 peft
-space
+spaces
